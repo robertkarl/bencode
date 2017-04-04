@@ -69,17 +69,14 @@ int bencode_dict_has_next(
 );
 
 /**
-* Get the next item within this dictionary.
-* @param be_item Next item.
-* @param key Const pointer to key string of next item.
-* @param klen Length of the key of next item.
+* Reveals the next key and value pair through <key> and <value> output args
 * @return 1 on success; otherwise 0.
 */
 int bencode_dict_get_next(
-    bencode_t * be,
-    bencode_t * be_item,
+    bencode_t *dictionary,
+    bencode_t *value,
     const char **key,
-    int *klen
+    int *keylen
 );
 
 /**
